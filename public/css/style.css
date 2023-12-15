@@ -163,7 +163,7 @@ section.recent.blogs .recent-container .recent-card-container {
     padding: 30px 0;
     max-width: fit-content;
     min-height: auto;
-    height: 200px;
+    height: 230px;
 
     border-bottom: 1px solid var(--border-grey);
 }

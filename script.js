@@ -55,15 +55,6 @@ app.get('/blogs',  function(req, res) {
             posts: data
         });
       });
-    // Post.findAll({raw: true, 
-        // include: [{
-        //             model: Tag,
-        //             attributes: ['name'], 
-        //          }],
-    // }).then((date)=>{
-    //     console.log(date)
-    //     res.render('blogs.hbs', {posts: date})
-    // })
 });
 // возвращаем форму для добавления данных
 app.get("/create", function(req, res){
@@ -87,10 +78,7 @@ app.post("/create", urlparser, function (req, res) {
             console.log(date)
             res.redirect('/blogs')
     });
-    // pool.query("INSERT INTO posts (name, descript, tag, date_post) VALUES (?,?,?,?)", [name, descript, tag, date_post], function(err, data) {
-    //   if(err) return console.log(err);
-    //   res.redirect("/blogs");
-    // });
+
 });
  
 // получем id редактируемого пользователя, получаем его из бд и отправлям с формой редактирования
@@ -104,7 +92,6 @@ app.get("/edit/:id", function(req, res){
      res.render("edit.hbs", {
         post: data[0]
     });
-    // res.render("create.hbs", { posts: data })
   });
 });
 // получаем отредактированные данные и отправляем их в БД

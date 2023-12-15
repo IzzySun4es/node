@@ -489,3 +489,27 @@ button.burger.open .line.line-3 {
         display: flex;
     }
 }
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+input[type="submit"]{
+    padding: 5px 25px;
+    background-color: #ff6464;
+    border: none;
+    font-size: 20px;
+}
+.p{
+    text-decoration: none;
+    color: rgb(3, 39, 94);
+    font-size: 24px;
+}
+.edit{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 5px 25px;
+    background-color: aquamarine;
+}

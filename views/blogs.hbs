@@ -32,6 +32,7 @@
                 <div class="container">
                     <div class="recent-header section-header">
                         <h2>Blog</h2>
+                        <p><a class="p" href="/create">Добавить пост</a></p>
                     </div>
 
                     <div class="div-recent-container">
@@ -46,13 +47,19 @@
                                     </div>
                                     <p>{{this.descript}}</p>
                                 </div>
+                                <div class="button">
+                                    <a class="edit" href="/edit/{{this.id}}">Edit</a>
+                                    <form action="delete/{{this.id}}" method="POST" style="display:inline;">
+                                        <input type="submit" value="Delete" />
+                                    </form>
+                                </div>
+                                
                             </div>
                         {{/each}} 
                     </div>
 
 
-                    <p><a href="/create">Добавить пост</a></p>
-                    <table>
+                    {{!-- <table>
 
                         <tr>
                             <th>Name</th>
@@ -76,7 +83,7 @@
                             </tr>
                         {{/each}}
 
-                    </table>
+                    </table> --}}
                 </div>
             </section>
            

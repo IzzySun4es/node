@@ -500,6 +500,8 @@ input[type="submit"]{
     background-color: #ff6464;
     border: none;
     font-size: 20px;
+    border-radius: 10px;
+    color: #fff;
 }
 .p{
     text-decoration: none;
@@ -508,8 +510,9 @@ input[type="submit"]{
 }
 .edit{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 20px;
-    padding: 5px 25px;
-    background-color: aquamarine;
+    padding: 5px 40px;
+    background-color: rgb(25, 165, 118);
+    border-radius: 10px;
 }

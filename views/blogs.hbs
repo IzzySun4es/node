@@ -13,13 +13,13 @@
             <header>
                 <ul class="menu">
                     <li>
-                        <a href="blogs.html" class="active">Blog</a>
+                        <a href="/blogs" class="active">Blog</a>
                     </li>
                     <li>
-                        <a href="works.html">Works</a>
+                        <a href="/works">Works</a>
                     </li>
                     <li>
-                        <a href="index.html">Contacts</a>
+                        <a href="/">Contacts</a>
                     </li>
                 </ul>
                 <button class="burger" onclick="toggleMenu()">
@@ -34,22 +34,49 @@
                         <h2>Blog</h2>
                     </div>
 
-
-                    {{#each posts}}
-                    <div class="recent-container">
-                        <div class="recent-card-container">
-                            <h3>{{this.name}}</h3>
-                            <div class="description">
-                                <p>{{this.date_post}}</p>
-                                <span class="line"></span>
-                                <p>{{this.tag}}</p>
+                    <div class="div-recent-container">
+                        {{#each posts}}
+                            <div class="recent-container">
+                                <div class="recent-card-container">
+                                    <h3>{{this.name}}</h3>
+                                    <div class="description">
+                                        <p>{{this.date_post}}</p>
+                                        <span class="line"></span>
+                                        <p>{{this.tag}}</p>
+                                    </div>
+                                    <p>{{this.descript}}</p>
+                                </div>
                             </div>
-                            <p>{{this.descript}}</p>
-                        </div>
+                        {{/each}} 
                     </div>
-                    {{/each}} 
 
 
+                    <p><a href="/create">Добавить пост</a></p>
+                    <table>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>date_post</th>
+                            <th>tag</th>
+                            <th>descript</th>
+                        </tr>
+
+                        {{#each posts}}
+                            <tr>
+                                <td>{{this.name}}</td>
+                                <td>{{this.date_post}}</td>
+                                <td>{{this.tag}}</td>
+                                <td>{{this.descript}}</td>
+                                <td>
+                                    <a href="/edit/{{this.id}}">Edit</a>|
+                                    <form action="delete/{{this.id}}" method="POST" style="display:inline;">
+                                        <input type="submit" value="Delete" />
+                                    </form>
+                                </td>
+                            </tr>
+                        {{/each}}
+
+                    </table>
                 </div>
             </section>
            

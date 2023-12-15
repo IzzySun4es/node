@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Редактирование поста</h1>
+     <form action="/edit" method="POST">
+        <input type="hidden" name="id" value="{{post.id}}" />
+        <label>Название</label><br>
+        <input name="name" type="text" value="{{post.name}}"  class="field" /><br><br>
+        <label>Дата</label><br>
+        <input name="date_post" type="date" value="{{post.date_post}}"  class="field" /><br><br>
+        <label>Тег</label><br>
+        <input name="tag" value="{{post.tag}}"  class="field" /><br><br>
+        <label>Описание</label><br>
+        <input name="descript" value="{{post.descript}}"  class="field" /><br><br>
+
+        <input type="submit" value="Отправить" />
+     </form>
+     <a href="/works">К списку постов</a>
+
+    </table>
+</body>
+</html>
